@@ -101,3 +101,16 @@ th, td {
     color: #fff;
     text-shadow: 0px 0px 5px #000;
 }
+
+
+/* Responsive */
+@media (max-width: 512px) {
+    .container {
+        width: 90%;
+        margin: auto;
+        margin-top: 25px;
+    }
+    .container .content {
+        padding: 15px;
+    }
+}
