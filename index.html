@@ -21,31 +21,31 @@
                     <th>Harga Tiket</th>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td>1.</td>
                     <td>The Conjuring 3</td>
                     <td>Senin, Selasa, Rabu</td>
                     <td>Rp.55.000</td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td>2.</td>
                     <td>Fast and Furious 9</td>
                     <td>Selasa, Kamis</td>
                     <td>Rp.50.000</td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td>3.</td>
                     <td>The Tomorrow War</td>
                     <td>Rabu, Jum'at, Sabtu</td>
                     <td>Rp.35.000</td>
                 </tr>
                 <tr>
-                    <td>4</td>
+                    <td>4.</td>
                     <td>Oxygen</td>
                     <td>Selasa, Minggu</td>
                     <td>Rp.40.000</td>
                 </tr>
                 <tr>
-                    <td>5</td>
+                    <td>5.</td>
                     <td>Godzilla vs. Kong</td>
                     <td>Kamis, Jum'at, Sabtu</td>
                     <td>Rp.40.000</td>
@@ -60,11 +60,11 @@
             <table cellspacing="0">
                 <tr>
                     <td><label for="nama">Nama</label></td>
-                    <td><input type="text" name="nama" id="nama"></td>
+                    <td><input type="text" name="nama" id="nama" required></td>
                 </tr>
                 <tr>
                     <td><label for="movie">Pilih Movie</label></td>
-                    <td><select name="movie" id="movie" class="select">
+                    <td><select name="movie" id="movie">
                         <option value="0">Pilih</option>
                         <option value="1">The Conjuring 3</option>
                         <option value="2">Fast and Furious 9</option>
@@ -75,11 +75,11 @@
                 </tr>
                 <tr>
                     <td><label for="jumlah">Jumlah Tiket</label></td>
-                    <td><input type="number" name="jumlah" id="jumlah"></td>
+                    <td><input type="number" name="jumlah" id="jumlah" required></td>
                 </tr>
                 <tr>
                     <th></th>
-                    <th><input type="button" name="button" id="btn" value="Pesan"></th>
+                    <th><button id="btn">Pesan</button></th>
                 </tr>
             </table>
         </div>
@@ -105,12 +105,16 @@
                     <td><label for="total">Total</label></td>
                     <td><input type="text" name="total" id="total" readonly></td>
                 </tr>
+                <tr>
+                    <td><label for="waktu">Tanggal</label></td>
+                    <td><input type="text" name="waktu" id="waktu" readonly></td>
+                </tr>
             </table>
             <p id="p"></p>
         </div>
         <!-- Akhir struk pembayaran -->
     </div>
-    
+
 <script src="script.js"></script>
 </body>
 </html>
