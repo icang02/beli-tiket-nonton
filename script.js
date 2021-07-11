@@ -1,9 +1,11 @@
 const btn = document.getElementById('btn');
 
 btn.addEventListener('click', function() {
+
     const nota = document.querySelector('.nota');
     nota.style.display = 'block';
-
+    
+    const d = new Date();
     const nama = document.getElementById('nama').value;
     const movie = document.getElementById('movie').value;
     const jumlah = document.getElementById('jumlah').value;
@@ -40,6 +42,8 @@ btn.addEventListener('click', function() {
     film.setAttribute('value', namaFilm);
     jumlahPesanan.setAttribute('value', jumlah);
     total.setAttribute('value', 'Rp.' + totalBayar);
+    waktu.setAttribute('value', d.toISOString().split('T')[0]);
+
     p.innerHTML = 'Silahkan selesaikan pembayaran Anda';
     
 });
