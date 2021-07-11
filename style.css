@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #aaa;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+.container .content {
+    padding: 20px 50px;
+    padding-bottom: 30px;
+    background: #eaeaea;
+    border-radius: 5px;
+}
+
+.container .content h1 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: rgba(0,0,0,0.6);
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+th, td {
+    border: 2px solid #999;
+    padding: 8px 10px;
+    letter-spacing: 0;
+    background: #eaeaea;
+    border-radius: 5px;
+}
+
+.order {
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.order h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+#nama, #movie, #jumlah {
+    width: 200px;
+}
+
+#btn {
+    width: 100px;
+    height: 30px;
+}
+
+.order table tr:nth-child(1) td:first-child {
+    width: 155px;
+}
+
+.nota {
+    margin: 20px;
+    display: none;
+}
+
+.nota h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+#pemesan, #film, #jumlahPesanan, #total {
+    width: 200px;
+}
+
+.nota table tr:nth-child(1) td:first-child {
+    width: 155px;
+}
+
+.nota p {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 15px;
+    color: #fff;
+    text-shadow: 0px 0px 5px #000;
+}

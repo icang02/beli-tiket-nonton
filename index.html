@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Ticket Movie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="content">
+            <h1>CINEMA KENDARI</h1>
+            <!-- Daftar film -->
+            <table cellspacing="0">
+                <tr>
+                    <th>No.</th>
+                    <th>Nama Movie</th>
+                    <th>Deskripsi</th>
+                    <th>Harga Tiket</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>The Conjuring 3</td>
+                    <td>CONJURING 3 DEVIL MADE ME DO IT diangkat dari kasus pengadilan yang <br> dikenal dengan nama sama. Ceritanya pada 24 November 1981 di Brookfield,<br> Connecticut, Arne Cheyenne Johnson disidang kasus pembunuhan tingkat <br> pertama atas kematian seorang tuan tanah bernama Alan Bono. </td>
+                    <td>Rp.55.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Fast and Furious 9</td>
+                    <td>Dom Toretto (Vin Diesel) menjalani kehidupan yang tenang dengan Letty dan <br> putranya, Brian kecil, tetapi mereka tahu bahwa bahaya selalu mengintai. Kali <br> ini, ancaman itu akan memaksa Dom untuk menghadapi kesalahan dari masa <br> lalunya jika dia ingin menyelamatkan orang yang paling dia cintai.</td>
+                    <td>Rp.50.000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>The Tomorrow War</td>
+                    <td>Kisahnya bermula saat Dan Forester (Chris Pratt) dan keluarganya sedang <br> menonton sebuah pertandingan sepak bola pada saat Natal. Sayangnya, <br> kehatangan suasana yang dirasakan oleh keluarga Dan berubah ketika <br> sekelompok prajurit dari masa depan datang secara tiba-tiba di tengah <br> pertandingan sepak bola yang ia tonton.</td>
+                    <td>Rp.35.000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Oxygen</td>
+                    <td>Kisahnya berkutat pada seseorang perempuan (Melanie Laurent) yang <br> terbangun dan menemukan dirinya berada dalam sebuah pod kriogenik. <br> Awalnya, perempuan tersebut mengira bahwa dia sedang dirawat karena <br> mengidap suatu penyakit.</td>
+                    <td>Rp.40.000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Godzilla vs. Kong</td>
+                    <td>Sebuah pertarungan epic dalam sinematik Monsterverse antara Godzilla dan <br> Kong.Pertarungan Godzilla vs. Kong membuat umat manusia harus bertahan <br> dengan berbagai cara. Salah satunya adalah memusnahkan kedua raksasa <br> tersebut.Siapa yang akan menang?</td>
+                    <td>Rp.40.000</td>
+                </tr>
+            </table>
+            <!-- Akhir daftar movie -->
+        </div>
+
+        <!-- Order tiket -->
+        <div class="order">
+            <h2>Pesan Tiket Nonton</h2>
+            <table cellspacing="0">
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td><input type="text" name="nama" id="nama"></td>
+                </tr>
+                <tr>
+                    <td><label for="movie">Pilih Movie</label></td>
+                    <td><select name="movie" id="movie" class="select">
+                        <option value="0">Pilih</option>
+                        <option value="1">The Conjuring 3</option>
+                        <option value="2">Fast and Furious 9</option>
+                        <option value="3">The Tomorrow War</option>
+                        <option value="4">Oxygen</option>
+                        <option value="5">Godzilla vs. Kong</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="jumlah">Jumlah Tiket</label></td>
+                    <td><input type="number" name="jumlah" id="jumlah"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th><input type="button" name="button" id="btn" value="Pesan"></th>
+                </tr>
+            </table>
+        </div>
+        <!-- Akhir order tiket -->
+
+        <!-- Struk pembayaran -->
+        <div class="nota">
+            <h2>Nota Pembayaran</h2>
+            <table cellspacing="0">
+                <tr>
+                    <td><label for="pemesan">Nama Pemesan</label></td>
+                    <td><input type="text" name="pemesan" id="pemesan" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="film">Movie</label></td>
+                    <td><input type="text" id="film" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="jumlahPesanan">Jumlah Tiket</label></td>
+                    <td><input type="number" name="jumlahPesanan" id="jumlahPesanan" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="total">Total</label></td>
+                    <td><input type="text" name="total" id="total" readonly></td>
+                </tr>
+            </table>
+            <p id="p"></p>
+        </div>
+        <!-- Akhir struk pembayaran -->
+    </div>
+    
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
