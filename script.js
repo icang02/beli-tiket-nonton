@@ -1,49 +1,62 @@
 const btn = document.getElementById('btn');
-
 btn.addEventListener('click', function() {
 
     const nota = document.querySelector('.nota');
     nota.style.display = 'block';
-    
-    const d = new Date();
-    const nama = document.getElementById('nama').value;
-    const movie = document.getElementById('movie').value;
-    const jumlah = document.getElementById('jumlah').value;
-    let harga = 0;
-    let totalBayar = 0;
-    
-    const pemesan = document.getElementById('pemesan');
-    const film = document.getElementById('film');
-    const jumlahPesanan = document.getElementById('jumlahPesanan');
-    const total = document.getElementById('total');
-    const p = document.getElementById('p');
-    let namaFilm = '';
 
-    if (movie == 1) {
-        harga = 55000;
-        namaFilm = 'The Conjuring 3';
-    } else if (movie == 2) {
-        harga = 50000;
-        namaFilm = 'Fast and Furious 9';
-    } else if (movie == 3) {
-        harga = 35000;
-        namaFilm = 'The Tomorrow War';
-    } else if (movie == 4) {
-        harga = 40000;
-        namaFilm = 'Oxygen';
-    } else if (movie == 5) {
-        harga = 40000;
-        namaFilm = 'Godzilla vs. Kong';
+    const nama = document.getElementById('nama').value;
+    // const movie = document.getElementById('movie').value;
+    const movie1 = document.getElementById('movie1').checked;
+    const movie2 = document.getElementById('movie2').checked;
+    const movie3 = document.getElementById('movie3').checked;
+    const hari = document.getElementById('hari').value;
+    const jumlah = document.getElementById('jumlah').value;
+    
+    const daftarHari = ['', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'];
+    let pilihMovie, pilihHari, harga;
+
+    console.log("movie conjuring : " + movie1);
+    console.log("fast furious : " + movie2);
+    console.log("godzilla : " + movie3);
+
+    if (movie1) {
+        pilihMovie = "The Conjuring 3";
+        pilihHari = daftarHari[hari];
+        if (hari >= 1 && hari <= 4 ) {
+            harga = 35000;
+        } else if (hari == 5) {
+            harga = 40000;
+        } else if (hari >= 6 && hari <= 7) {
+            harga = 45000;
+        }
+    } else if (movie2) {
+        pilihMovie = "Fast and Furious 9";
+        pilihHari = daftarHari[hari];
+        if (hari >= 1 && hari <= 4 ) {
+            harga = 45000;
+        } else if (hari == 5) {
+            harga = 50000;
+        } else if (hari >= 6 && hari <= 7) {
+            harga = 55000;
+        }
+    } else if (movie3) {
+        pilihMovie = "Godzilla vs. Kong";
+        pilihHari = daftarHari[hari];
+        if (hari >= 1 && hari <= 4 ) {
+            harga = 40000;
+        } else if (hari == 5) {
+            harga = 45000;
+        } else if (hari >= 6 && hari <= 7) {
+            harga = 50000;
+        }
     }
 
-    totalBayar = harga * jumlah;
-
-    pemesan.setAttribute('value', nama);
-    film.setAttribute('value', namaFilm);
-    jumlahPesanan.setAttribute('value', jumlah);
-    total.setAttribute('value', 'Rp.' + totalBayar);
-    waktu.setAttribute('value', d.toISOString().split('T')[0]);
-
-    p.innerHTML = 'Silahkan selesaikan pembayaran Anda';
+    document.getElementById('tNama').setAttribute('value', nama.toUpperCase());
+    document.getElementById('tMovie').setAttribute('value', pilihMovie);
+    document.getElementById('tHari').setAttribute('value', pilihHari);
+    document.getElementById('tJumlah').setAttribute('value', jumlah);
+    document.getElementById('tTotal').setAttribute('value', 'Rp.' + harga * jumlah);
+    document.getElementById('tTanggal').setAttribute('value', new Date().toString().split('G')[0]);
+    document.getElementById('tInfo').innerHTML = 'Silahkan selesaikan pembayaran Anda';
     
 });
