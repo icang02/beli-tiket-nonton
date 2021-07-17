@@ -61,7 +61,7 @@ th, td {
     text-shadow: 2px 2px 5px #000;
 }
 
-#nama, #movie, #jumlah {
+#nama, #movie, #jumlah, #hari {
     width: 200px;
 }
 
@@ -86,7 +86,7 @@ th, td {
     text-shadow: 2px 2px 5px #000;
 }
 
-#pemesan, #film, #jumlahPesanan, #total, #waktu {
+#tNama, #tMovie, #tHari, #tJumlah, #tTotal, #tTanggal {
     width: 200px;
 }
 
